@@ -1,4 +1,4 @@
-//Ashkan Ramjerdi xcqc0000
+//Ashkan Ramjerdi 
 #include <stdbool.h>
 #include <math.h>
 #include "shapes.h"
@@ -36,9 +36,9 @@ float lineLength( Line l ){
 
 
 float triangleArea( Triangle t ){
-    Line LineA=makeLine(t.p[0],t.p[1]);
-    Line LineB=makeLine(t.p[1],t.p[2]);
-    Line LineC=makeLine(t.p[2],t.p[0]);
+    Line LineA=makeline(t.p[0],t.p[1]);
+    Line LineB=makeline(t.p[1],t.p[2]);
+    Line LineC=makeline(t.p[2],t.p[0]);
     float a =lineLength(LineA);
     float b =lineLength(LineB);
     float c =lineLength(LineC);
@@ -52,7 +52,7 @@ bool samePoint( Point p1, Point p2 ){
     float y1=p1.y;
     float x2=p2.x;
     float y2=p2.y;
-    if (abs(x1-x2)<1.0e-6 && abs(y1-y2)<1.0e-6){
+    if (fabs(x1-x2)<1.0e-6 && fabs(y1-y2)<1.0e-6){
         return true;
     }
     else{
