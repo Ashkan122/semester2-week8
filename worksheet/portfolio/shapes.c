@@ -10,7 +10,7 @@ Point makePoint( float x, float y ) {
     return new;
 }
 
-Line makeline(Point p1, Point p2){
+Line makeLine(Point p1, Point p2){
     Line new;
     new.p[0]=p1;
     new.p[1]=p2;
@@ -36,9 +36,9 @@ float lineLength( Line l ){
 
 
 float triangleArea( Triangle t ){
-    Line LineA=makeline(t.p[0],t.p[1]);
-    Line LineB=makeline(t.p[1],t.p[2]);
-    Line LineC=makeline(t.p[2],t.p[0]);
+    Line LineA=makeLine(t.p[0],t.p[1]);
+    Line LineB=makeLine(t.p[1],t.p[2]);
+    Line LineC=makeLine(t.p[2],t.p[0]);
     float a =lineLength(LineA);
     float b =lineLength(LineB);
     float c =lineLength(LineC);
